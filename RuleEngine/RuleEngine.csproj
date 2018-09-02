@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Comparison.cs" />
     <Compile Include="Constants.cs" />
+    <Compile Include="IncomingDataParser.cs" />
     <Compile Include="IRule.cs" />
     <Compile Include="Parser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

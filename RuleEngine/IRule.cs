@@ -1,10 +1,32 @@
 ﻿namespace RuleEngine
 {
+    /// <summary>
+    /// Defines a rule used by the parser
+    /// </summary>
     public interface IRule
     {
+        /// <summary>
+        /// Gets the signal.
+        /// </summary>
+        /// <value>
+        /// The signal.
+        /// </value>
         string Signal { get; }
+
+        /// <summary>
+        /// Gets the value.
+        /// </summary>
+        /// <value>
+        /// The value.
+        /// </value>
         dynamic Value { get; }
 
+        /// <summary>
+        /// Gets the type of the comparison.
+        /// </summary>
+        /// <value>
+        /// The type of the comparison.
+        /// </value>
         Comparison ComparisonType { get; }
 
         /// <summary>

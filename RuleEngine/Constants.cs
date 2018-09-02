@@ -1,5 +1,8 @@
 ﻿namespace RuleEngine
 {
+    /// <summary>
+    /// Defines constants used by the parser, rules and within the Rule Engine.
+    /// </summary>
     internal static class Constants
     {
         #region Constants

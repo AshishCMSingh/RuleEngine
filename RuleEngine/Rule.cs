@@ -4,6 +4,10 @@
     using System.Collections.Generic;
     using System.IO;
 
+    /// <summary>
+    /// Implements a rule used by the parser. This class also provide the built-in rules defined in Rules.CSV
+    /// </summary>
+    /// <seealso cref="RuleEngine.IRule" />
     public class Rule : IRule
     {
         #region Constructors
@@ -122,7 +126,7 @@
         }
 
         /// <summary>
-        /// Gets the rules.
+        /// Gets the built-in rules defined in Rules.CSV
         /// </summary>
         /// <value>
         /// The rules.
@@ -176,17 +180,17 @@
                         foreach (var rule in rules)
                         {
                             if (isHeader) { isHeader = false; continue; } // Skip header
-                            var data = rule.Split(',');
+                            var data = rule.Split(Constants.ElementSeparator);
 
-                            var signal = data[0].Split('"')[1];
-                            Enum.TryParse(data[1].Split('"')[1], out Comparison comparisonType);
-                            var valueType = data[3].Split('"')[1];
+                            var signal = data[0].Split(Constants.ObjectWrapper)[1];
+                            Enum.TryParse(data[1].Split(Constants.ObjectWrapper)[1], out Comparison comparisonType);
+                            var valueType = data[3].Split(Constants.ObjectWrapper)[1];
 
                             var typeInfo = Type.GetType($"System.{valueType}", false, true);
                             dynamic value = null;
                             if (typeInfo != null)
                             {
-                                value = Convert.ChangeType(data[2].Split('"')[1], typeInfo);
+                                value = Convert.ChangeType(data[2].Split(Constants.ObjectWrapper)[1], typeInfo);
                             }
                             else
                             {

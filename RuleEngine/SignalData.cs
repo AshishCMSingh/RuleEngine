@@ -2,6 +2,9 @@
 {
     using System;
 
+    /// <summary>
+    /// Defines a incoming signal data
+    /// </summary>
     public class SignalData
     {
         #region Constants

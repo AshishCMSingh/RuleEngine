@@ -1,5 +1,8 @@
 ﻿namespace RuleEngine
 {
+    /// <summary>
+    /// Defines the type of comparison between two operand.
+    /// </summary>
     public enum Comparison : short
     {
         Equal,

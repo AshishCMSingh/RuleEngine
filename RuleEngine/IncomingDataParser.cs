@@ -13,16 +13,21 @@
         #endregion
 
         #region Constructors
+        /// <summary>
+        /// Initializes a new instance of the <see cref="IncomingDataParser"/> class.
+        /// </summary>
+        /// <exception cref="NotImplementedException"></exception>
         public IncomingDataParser()
         {
-
+            //TODO: Implement 
+            throw new NotImplementedException();
         }
         #endregion
 
         #region Public Methods
 
         /// <summary>
-        /// Parses the specified json input.
+        /// Parses the specified JSON input.
         /// </summary>
         /// <param name="input">The input.</param>
         /// <returns></returns>
@@ -36,20 +41,7 @@
             bool isValue = false; // Flag representing whether current item represents a value
             int objectCounts = 0; // Total signal objects
 
-            SignalUnit[] signals = new SignalUnit[8];
-
-            for (int i = 0; i < 15; i++)
-            {
-                if (i < signals.Length)
-                {
-                    signals[i] = new SignalUnit("", "", "");
-                }
-                else
-                {
-                    Array.Resize(ref signals, signals.Length + 7);
-                    signals[i] = new SignalUnit("", "", "");
-                }
-            }
+            SignalData[] signals = new SignalData[8];
 
             StringBuilder tempStringBuilder = new StringBuilder();
             foreach (char c in input)
@@ -66,17 +58,17 @@
                         isValue = false;
                         break;
 
-                    case Constants.ObjectStringValueWrapper:
+                    case Constants.ObjectWrapper:
                         break;
 
-                    case Constants.ObjectValueSeparator:
+                    case Constants.ObjectSeparator:
                         break;
 
                     case Constants.ObjectEnd:
                         objectCounts++;
                         break;
 
-                    case Constants.ArrayValueSeparator:
+                    case Constants.ElementSeparator:
                         ignoreSpace = true;
                         break;
 

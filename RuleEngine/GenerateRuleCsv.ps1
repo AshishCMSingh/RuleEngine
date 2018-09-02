@@ -50,8 +50,4 @@ $rules = @()
 $rules += New-Object RuleEngine.Rule -ArgumentList @('ATL1', 240, [RuleEngine.Comparison]::LessThan)
 $rules += New-Object RuleEngine.Rule -ArgumentList @('ATL2', 'LOW', [RuleEngine.Comparison]::Equal)
 $rules += New-Object RuleEngine.Rule -ArgumentList @('ATL3', (Get-Date), [RuleEngine.Comparison]::GreaterThan)
-
-
 $rules | Export-Csv 'C:\Users\Ashish Singh\Documents\Visual Studio 2017\Projects\RuleEngine\RuleEngine\Rules.csv' -Force -NoTypeInformation
-
-[Type]::GetType('System.String')
