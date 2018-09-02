@@ -1,5 +1,5 @@
 # Rule Engine Challenge
-This is an initial solution to following problem statement. See [vNext](https://github.com/AshishCMSingh/RuleEngine/new/master?readme=1#vnext) for future plans and [Current Approach](https://github.com/AshishCMSingh/RuleEngine/new/master?readme=1#current-approach) for the answers to the [Discussion Questions](https://github.com/AshishCMSingh/RuleEngine/new/master?readme=1#discussion-questions).
+This is an initial solution to following problem statement. See [vNext](https://github.com/AshishCMSingh/RuleEngine#vnext) for future plans and [Current Approach](https://github.com/AshishCMSingh/RuleEngine#current-approach) for the answers to the [Discussion Questions](https://github.com/AshishCMSingh/RuleEngine#discussion-questions).
 
 ## Problem Statement
 Build a rule engine that will apply rules on streaming data. Your program should be able to perform following tasks, at minimum:
@@ -16,6 +16,7 @@ Incoming data stream is a tagged data stream. Each incoming data is a hashmap wi
 ...
 ...
 ```
+
 In general, a data unit would have three keys
 
 - **signal:** This key specifies the source ID of the signal. It could be any valid alphanumeric combo. ex: ATL1, ATL2, ATL3, ATL4
@@ -71,8 +72,11 @@ To test the functionalty written 4 unit tests
 - ```TestParserWithRulesFromFile()```
 - ```TestParserWithCustomRules()```
 - ```TestParserOnFirstValidationFailureWithCustomRules()```
+
 #### Test Result
 ![alt text](https://github.com/AshishCMSingh/RuleEngine/blob/master/RuleEnginTest/Docs/TestResult.PNG "Test Results")
+
+ >_Input sample:_ [raw_signal.json](https://github.com/AshishCMSingh/RuleEngine/blob/master/RuleEnginTest/raw_data.json) |  _Processor:_	Intel Core **i5-3210M CPU @ 2.50GHz**, 2501 Mhz, 2 Cores, 4 Logical Processors | _RAM:_ **8.00 GB** | _OS:_ Windows 10 Pro x64 (10.0.17134 Build 17134) 
 
 ### Documentation
 Written XML summaries for all public methods for documentation and better clarity of functionality.
