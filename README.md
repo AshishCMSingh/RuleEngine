@@ -79,7 +79,7 @@ To test the functionalty written 4 unit tests
  >_Input sample:_ [raw_signal.json](https://github.com/AshishCMSingh/RuleEngine/blob/master/RuleEnginTest/raw_data.json) |  _Processor:_	Intel Core **i5-3210M CPU @ 2.50GHz**, 2501 Mhz, 2 Cores, 4 Logical Processors | _RAM:_ **8.00 GB** | _OS:_ Windows 10 Pro x64 (10.0.17134 Build 17134) 
 
 ### Documentation
-Written XML summaries for all public methods for documentation and better clarity of functionality.
+Written XML comments for all the user-defined objects for documentation and better clarity of functionality.
 
 # vNext
 1. Since cannot use Json.NET due to the challenge rule, will replace ```String.Split()``` with more effective approach (see ```IncomingDataParser.cs``` not yet complete) for parsing input data stream. Currently parsing complexity is O(n^2) and targetteing for O(n).
