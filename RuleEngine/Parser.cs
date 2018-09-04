@@ -53,7 +53,7 @@
                                 string fieldName = element.Substring(0, indexOfObjectSeparator);
                                 string fieldValue = element.Substring(indexOfObjectSeparator + 1);
 
-                                if (!string.IsNullOrWhiteSpace(element) && !string.IsNullOrWhiteSpace(element))
+                                if (!string.IsNullOrWhiteSpace(fieldName) && !string.IsNullOrWhiteSpace(fieldValue))
                                 {
                                     fieldName = fieldName.ToLowerInvariant().Split(Constants.ObjectWrapper)[1];
                                     fieldValue = fieldValue.Split(Constants.ObjectWrapper)[1];
@@ -84,7 +84,7 @@
                             string.IsNullOrWhiteSpace(parsedValue) ||
                             string.IsNullOrWhiteSpace(parsedValueType))
                         {
-                            return false;  // Parsing failed due to invalid input format
+                            return false; // Parsing failed due to invalid input format
                         }
 
                         var signalData = new SignalData(parsedSignal, parsedValue, parsedValueType);

@@ -13,7 +13,7 @@
         #region Constructors
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Rule{T}" /> class.
+        /// Initializes a new instance of the <see cref="Rule" /> class.
         /// </summary>
         /// <param name="signal">The signal.</param>
         /// <param name="value">The value.</param>
@@ -119,7 +119,6 @@
                             return result;
                     }
                 }
-
             }
 
             return result;
