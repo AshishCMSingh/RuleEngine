@@ -83,6 +83,7 @@ Written XML comments for all the user-defined objects for documentation and bett
 
 # vNext
 1. Since cannot use Json.NET due to the challenge rule, will replace ```String.Split()``` with more effective approach (see ```IncomingDataParser.cs``` not yet complete) for parsing input data stream. Currently parsing complexity is O(n^2) and targetteing for O(n).
-2. Implement logger functionality.
-3. Should be able to save rules as CSV/JSON or other format.
-4. Add overloads for ```Parser.TryParse()``` method to get data directly from streams.
+2. Do parallel execution for signals and rules to get better performance in case of high volume input. 
+3. Implement logger functionality.
+4. Should be able to save rules as CSV/JSON or other format.
+5. Add overloads for ```Parser.TryParse()``` method to get data directly from streams.
